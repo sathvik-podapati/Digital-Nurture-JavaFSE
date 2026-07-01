@@ -1,0 +1,3 @@
+package com.cognizant.ormlearn;
+import java.util.*;import org.slf4j.*;import org.springframework.boot.*;import org.springframework.boot.autoconfigure.*;import org.springframework.context.*;import com.cognizant.ormlearn.model.Country;import com.cognizant.ormlearn.service.CountryService;
+@SpringBootApplication public class OrmLearnApplication{static Logger LOGGER=LoggerFactory.getLogger(OrmLearnApplication.class);static CountryService cs;public static void main(String[] a){ApplicationContext c=SpringApplication.run(OrmLearnApplication.class,a);LOGGER.info("Inside main");cs=c.getBean(CountryService.class);List<Country>x=cs.getAllCountries();LOGGER.info(x.toString());}}

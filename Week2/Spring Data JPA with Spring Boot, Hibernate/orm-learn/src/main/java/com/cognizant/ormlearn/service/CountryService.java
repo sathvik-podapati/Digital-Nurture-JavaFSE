@@ -1,0 +1,3 @@
+package com.cognizant.ormlearn.service;
+import java.util.*;import org.springframework.beans.factory.annotation.Autowired;import org.springframework.stereotype.Service;import jakarta.transaction.Transactional;import com.cognizant.ormlearn.model.Country;import com.cognizant.ormlearn.repository.CountryRepository;
+@Service public class CountryService{@Autowired CountryRepository repo; @Transactional public List<Country> getAllCountries(){return repo.findAll();}}
